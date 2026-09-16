@@ -1,0 +1,100 @@
+/* PigWars legal pages — the game's own palette (see CLAUDE.md in the game repo)
+   so these read as part of the same product rather than a stock template. */
+:root {
+  color-scheme: dark;
+  --bg: #0f0a08;
+  --panel: #1f1710;
+  --title: #facc40;
+  --subtitle: #b39966;
+  --text: #f2ede6;
+  --dim: #a89c8c;
+  --rule: #3a2c1e;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.wrap {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 3rem 1.25rem 5rem;
+}
+
+header {
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+h1 {
+  font-size: clamp(1.9rem, 6vw, 2.6rem);
+  line-height: 1.15;
+  margin: 0 0 .4rem;
+  color: var(--title);
+  letter-spacing: -.01em;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin: 2.5rem 0 .75rem;
+  color: var(--title);
+}
+
+.lede { color: var(--subtitle); margin: 0; }
+.updated { color: var(--dim); font-size: .875rem; margin: .75rem 0 0; }
+
+a { color: var(--title); }
+a:hover { text-decoration: none; }
+
+ul { padding-left: 1.25rem; }
+li { margin: .4rem 0; }
+
+.card {
+  display: block;
+  background: var(--panel);
+  border: 1px solid var(--rule);
+  border-radius: .6rem;
+  padding: 1.1rem 1.25rem;
+  margin: .75rem 0;
+  text-decoration: none;
+  color: var(--text);
+}
+.card:hover { border-color: var(--title); }
+.card strong { color: var(--title); display: block; margin-bottom: .2rem; }
+.card span { color: var(--dim); font-size: .9rem; }
+
+table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .95rem; }
+th, td { text-align: left; padding: .6rem .5rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { color: var(--subtitle); font-weight: 600; }
+
+.note {
+  background: var(--panel);
+  border-left: 3px solid var(--title);
+  padding: .9rem 1.1rem;
+  margin: 1.5rem 0;
+  border-radius: 0 .4rem .4rem 0;
+}
+
+footer {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+  color: var(--dim);
+  font-size: .875rem;
+}
+
+@media (max-width: 30rem) {
+  .wrap { padding-top: 2rem; }
+  table, thead, tbody, th, td, tr { display: block; }
+  thead { display: none; }
+  td { border: none; padding: .15rem 0; }
+  tr { border-bottom: 1px solid var(--rule); padding: .7rem 0; }
+  td:first-child { color: var(--title); font-weight: 600; }
+}
